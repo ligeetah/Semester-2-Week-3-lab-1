@@ -11,10 +11,16 @@ namespace tasks
     {
         static void Main(string[] args)
         {
-            List<int> num = new List<int>() { 1,2,3,4,5,6,7,8,9};
-            foreach(var i in num)
+            List<test> numbers = new List<test>();
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(i);
+                test r=new test();
+                r.num = i+1;
+                numbers.Add(r);
+            }
+            foreach(var i in numbers)
+            {
+                Console.WriteLine(i.num);
             }
             Console.ReadKey();
         }
