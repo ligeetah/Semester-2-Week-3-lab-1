@@ -70,5 +70,26 @@ namespace tasks.jk
                 return false;
             }
         }
+        public void in_sec()
+        {
+            int secs = hr * 3600 + min * 60 + sec;
+            Console.WriteLine("Time in Sec : " + secs);
+        }
+        public void rem_in_sec()
+        {
+            int secs = 86400-( hr * 3600 + min * 60 + sec);
+            Console.WriteLine("Time Left in Sec : " + secs);
+        }
+        public void distance(test c1,test c2)
+        {
+            int c1_sec = c1.hr * 3600 + c1.min * 60 + c1.sec;
+            int c2_sec = c2.hr * 3600 + c2.min * 60 + c2.sec;
+            int dif=Math.Abs(c1_sec - c2_sec);
+            int h, m, s;
+            h = dif / 3600;
+            m = dif / 60;
+            s = dif % 60;
+            Console.WriteLine("Time Difference > "+h+" "+m+" "+s);
+        }
     }
 }
