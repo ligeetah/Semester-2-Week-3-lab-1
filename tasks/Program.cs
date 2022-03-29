@@ -12,9 +12,9 @@ namespace tasks
         static void Main(string[] args)
         {
             List<int> num = new List<int>() { 1,2,3,4,5,6,7,8,9};
-            for (int i = 0; i < num.Count; i++)
+            foreach(var i in num)
             {
-                Console.WriteLine(num[i]);
+                Console.WriteLine(i);
             }
             Console.ReadKey();
         }
